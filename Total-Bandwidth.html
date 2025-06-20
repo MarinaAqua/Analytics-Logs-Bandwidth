@@ -18,48 +18,56 @@
             background: linear-gradient(135deg, #1a2a6c, #2a3a7c, #3a4a8c);
             color: #fff;
             min-height: 100vh;
-            padding: 20px;
+            padding: 16px;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
+            padding: 0 16px;
         }
         
         header {
             text-align: center;
-            padding: 30px 0;
-            margin-bottom: 30px;
+            padding: 24px 0;
+            margin-bottom: 20px;
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 8px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            word-break: break-word;
         }
         
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
             opacity: 0.9;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            word-break: break-word;
         }
         
         .api-status {
             display: flex;
             justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 24px;
         }
         
         .api-box {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 12px 20px;
+            border-radius: 8px;
+            padding: 10px 16px;
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         
         .api-box.active {
@@ -67,6 +75,8 @@
         }
         
         .status-indicator {
+            min-width: 12px;
+            min-height: 12px;
             width: 12px;
             height: 12px;
             border-radius: 50%;
@@ -75,18 +85,19 @@
         
         .dashboard {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
         }
         
         .card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            padding: 25px;
+            padding: 18px;
             transition: transform 0.3s ease;
+            overflow: hidden;
         }
         
         .card:hover {
@@ -97,16 +108,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .card-title {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            word-break: break-word;
         }
         
         .card-title i {
@@ -114,23 +126,31 @@
         }
         
         .card-content {
-            padding: 10px 0;
+            padding: 8px 0;
+            overflow-x: auto;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
+            min-width: 240px;
         }
         
         th, td {
-            padding: 12px 15px;
+            padding: 10px 12px;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            word-break: break-word;
         }
         
         th {
             background: rgba(255, 255, 255, 0.1);
             font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        td {
+            font-size: 0.9rem;
         }
         
         tr:last-child td {
@@ -144,31 +164,33 @@
         .country-section {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            padding: 25px;
-            margin-bottom: 30px;
+            padding: 18px;
+            margin-bottom: 32px;
+            overflow: hidden;
         }
         
         .controls {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
         }
         
         .search-box {
             display: flex;
             align-items: center;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 8px 15px;
-            width: 300px;
+            border-radius: 24px;
+            padding: 6px 12px;
+            width: 100%;
+            max-width: 300px;
         }
         
         .search-box i {
-            margin-right: 10px;
+            margin-right: 8px;
             opacity: 0.7;
         }
         
@@ -178,7 +200,7 @@
             color: white;
             width: 100%;
             outline: none;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         
         .search-box input::placeholder {
@@ -187,17 +209,19 @@
         
         .filter-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
+            flex-wrap: wrap;
         }
         
         .filter-btn {
             background: rgba(255, 255, 255, 0.1);
             border: none;
             color: white;
-            padding: 8px 15px;
-            border-radius: 30px;
+            padding: 6px 12px;
+            border-radius: 24px;
             cursor: pointer;
             transition: background 0.3s;
+            font-size: 0.85rem;
         }
         
         .filter-btn:hover, .filter-btn.active {
@@ -208,42 +232,50 @@
             display: flex;
             justify-content: space-around;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 15px;
-            margin: 20px 0;
+            border-radius: 12px;
+            padding: 12px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+            gap: 12px;
         }
         
         .stat-item {
             text-align: center;
+            min-width: 80px;
+            flex: 1;
         }
         
         .stat-value {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: #4fc3f7;
         }
         
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             opacity: 0.8;
         }
         
         .chart-container {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            height: 400px;
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            margin-bottom: 24px;
+            height: 320px;
+            width: 100%;
+            overflow: hidden;
         }
         
         .loading {
             text-align: center;
-            padding: 20px;
+            padding: 16px;
         }
         
         .loading i {
             font-size: 2rem;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #4fc3f7;
             animation: spin 1s linear infinite;
         }
@@ -255,12 +287,28 @@
         
         footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 24px 0;
             opacity: 0.8;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 12px;
+            }
+            
+            header {
+                padding: 16px 0;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
             .dashboard {
                 grid-template-columns: 1fr;
             }
@@ -270,11 +318,24 @@
             }
             
             .search-box {
-                width: 100%;
+                max-width: 100%;
             }
             
             .filter-buttons {
-                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .stats-bar {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .stat-item {
+                min-width: auto;
+            }
+            
+            .chart-container {
+                height: 260px;
             }
         }
     </style>
@@ -416,18 +477,20 @@
                 </div>
             </div>
             
-            <table id="countryTable">
-                <thead>
-                    <tr>
-                        <th>Negara</th>
-                        <th>Requests</th>
-                        <th>Bandwidth</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Data akan diisi oleh JavaScript -->
-                </tbody>
-            </table>
+            <div class="card-content">
+                <table id="countryTable">
+                    <thead>
+                        <tr>
+                            <th>Negara</th>
+                            <th>Requests</th>
+                            <th>Bandwidth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
         
         <footer>

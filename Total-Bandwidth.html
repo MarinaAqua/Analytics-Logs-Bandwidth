@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudflare Analytics Dashboard</title>
+    <title>Club Gratis Analytics Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -13,83 +13,53 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
         body {
             background: linear-gradient(135deg, #1a2a6c, #2a3a7c, #3a4a8c);
             color: #fff;
             min-height: 100vh;
             padding: 16px;
         }
-        
+        .logo-circle-container {
+  text-align: center;
+  margin: 16px 0;
+}
+.logo-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+}
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
             padding: 0 16px;
         }
-        
         header {
             text-align: center;
             padding: 24px 0;
             margin-bottom: 20px;
         }
-        
         h1 {
             font-size: 2rem;
             margin-bottom: 8px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
             word-break: break-word;
         }
-        
         .subtitle {
             font-size: 1rem;
             opacity: 0.9;
             margin-bottom: 16px;
             word-break: break-word;
         }
-        
-        .api-status {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-        
-        .api-box {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.85rem;
-            max-width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        
-        .api-box.active {
-            border: 1px solid #4fc3f7;
-        }
-        
-        .status-indicator {
-            min-width: 12px;
-            min-height: 12px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #4fc3f7;
-        }
-        
         .dashboard {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 16px;
             margin-bottom: 32px;
         }
-        
         .card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -99,11 +69,9 @@
             transition: transform 0.3s ease;
             overflow: hidden;
         }
-        
         .card:hover {
             transform: translateY(-5px);
         }
-        
         .card-header {
             display: flex;
             justify-content: space-between;
@@ -112,7 +80,6 @@
             padding-bottom: 12px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
         .card-title {
             font-size: 1.1rem;
             display: flex;
@@ -120,47 +87,38 @@
             gap: 8px;
             word-break: break-word;
         }
-        
         .card-title i {
             color: #4fc3f7;
         }
-        
         .card-content {
             padding: 8px 0;
             overflow-x: auto;
         }
-        
         table {
             width: 100%;
             border-collapse: collapse;
             min-width: 240px;
         }
-        
         th, td {
             padding: 10px 12px;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             word-break: break-word;
         }
-        
         th {
             background: rgba(255, 255, 255, 0.1);
             font-weight: 600;
             font-size: 0.9rem;
         }
-        
         td {
             font-size: 0.9rem;
         }
-        
         tr:last-child td {
             border-bottom: none;
         }
-        
         tr:hover {
             background: rgba(255, 255, 255, 0.05);
         }
-        
         .country-section {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -170,7 +128,6 @@
             margin-bottom: 32px;
             overflow: hidden;
         }
-        
         .controls {
             display: flex;
             justify-content: space-between;
@@ -178,7 +135,6 @@
             flex-wrap: wrap;
             gap: 12px;
         }
-        
         .search-box {
             display: flex;
             align-items: center;
@@ -188,12 +144,10 @@
             width: 100%;
             max-width: 300px;
         }
-        
         .search-box i {
             margin-right: 8px;
             opacity: 0.7;
         }
-        
         .search-box input {
             background: transparent;
             border: none;
@@ -202,17 +156,14 @@
             outline: none;
             font-size: 0.9rem;
         }
-        
         .search-box input::placeholder {
             color: rgba(255, 255, 255, 0.5);
         }
-        
         .filter-buttons {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
-        
         .filter-btn {
             background: rgba(255, 255, 255, 0.1);
             border: none;
@@ -223,11 +174,9 @@
             transition: background 0.3s;
             font-size: 0.85rem;
         }
-        
         .filter-btn:hover, .filter-btn.active {
             background: #4fc3f7;
         }
-        
         .stats-bar {
             display: flex;
             justify-content: space-around;
@@ -238,24 +187,20 @@
             flex-wrap: wrap;
             gap: 12px;
         }
-        
         .stat-item {
             text-align: center;
             min-width: 80px;
             flex: 1;
         }
-        
         .stat-value {
             font-size: 1.4rem;
             font-weight: 600;
             color: #4fc3f7;
         }
-        
         .stat-label {
             font-size: 0.8rem;
             opacity: 0.8;
         }
-        
         .chart-container {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -267,73 +212,73 @@
             width: 100%;
             overflow: hidden;
         }
-        
         .loading {
             text-align: center;
             padding: 16px;
         }
-        
         .loading i {
             font-size: 2rem;
             margin-bottom: 8px;
             color: #4fc3f7;
             animation: spin 1s linear infinite;
         }
-        
         @keyframes spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-        
         footer {
             text-align: center;
             padding: 24px 0;
             opacity: 0.8;
             font-size: 0.8rem;
         }
-        
+        /* CSS untuk icon-buttons (ubah jadi link) */
+        .icon-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .icon-buttons a {
+            color: #4fc3f7;
+            font-size: 1.5rem; /* Diperbesar jadi 1.5rem */
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .icon-buttons a:hover {
+            transform: scale(1.1);
+        }
         @media (max-width: 600px) {
             .container {
                 padding: 0 12px;
             }
-            
             header {
                 padding: 16px 0;
             }
-            
             h1 {
                 font-size: 1.6rem;
             }
-            
             .subtitle {
                 font-size: 0.9rem;
             }
-            
             .dashboard {
                 grid-template-columns: 1fr;
             }
-            
             .controls {
                 flex-direction: column;
             }
-            
             .search-box {
                 max-width: 100%;
             }
-            
             .filter-buttons {
                 justify-content: center;
             }
-            
             .stats-bar {
                 flex-direction: column;
                 gap: 8px;
             }
-            
             .stat-item {
                 min-width: auto;
             }
-            
             .chart-container {
                 height: 260px;
             }
@@ -343,42 +288,38 @@
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-chart-line"></i> Cloudflare Analytics Dashboard</h1>
+            <h1><i class="fas fa-chart-line"></i> Club Gratis Analytics Dashboard</h1>
+            <div class="logo-circle-container">
+  <img src="https://raw.githubusercontent.com/MarinaAqua/portofolio2/main/logo.jpg" alt="Logo" class="logo-circle">
+</div>
             <p class="subtitle">Monitor traffic dan bandwidth secara real-time</p>
-            
-            <div class="api-status">
-                <div class="api-box active">
-                    <div class="status-indicator"></div>
-                    <span>API Utama: api-bndwht.marinaaqua366.workers.dev</span>
-                </div>
-                <div class="api-box active">
-                    <div class="status-indicator"></div>
-                    <span>API Country: bandwidth-by-country.marinaaqua366.workers.dev</span>
-                </div>
-            </div>
         </header>
-        
         <div class="dashboard">
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title"><i class="fas fa-calendar-day"></i> Data Harian</h2>
+            <div>
+                <div class="icon-buttons">
+                    <a href="/" title="Home"><i class="fas fa-home"></i></a>
+                    <a href="https://example.com/donate" title="Donate"><i class="fas fa-donate"></i></a>
                 </div>
-                <div class="card-content">
-                    <table id="dailyTable">
-                        <thead>
-                            <tr>
-                                <th>Tanggal</th>
-                                <th>Bandwidth</th>
-                                <th>Requests</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Data akan diisi oleh JavaScript -->
-                        </tbody>
-                    </table>
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title"><i class="fas fa-calendar-day"></i> Data Harian</h2>
+                    </div>
+                    <div class="card-content">
+                        <table id="dailyTable">
+                            <thead>
+                                <tr>
+                                    <th>Tanggal</th>
+                                    <th>Bandwidth</th>
+                                    <th>Requests</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data akan diisi oleh JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title"><i class="fas fa-calendar-week"></i> Data Mingguan</h2>
@@ -398,7 +339,6 @@
                     </table>
                 </div>
             </div>
-            
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title"><i class="fas fa-calendar-alt"></i> Data Bulanan</h2>
@@ -418,7 +358,6 @@
                     </table>
                 </div>
             </div>
-            
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title"><i class="fas fa-globe"></i> Data Total</h2>
@@ -439,25 +378,21 @@
                 </div>
             </div>
         </div>
-        
         <div class="chart-container">
             <canvas id="countryChart"></canvas>
         </div>
-        
         <div class="country-section">
             <div class="controls">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
                     <input type="text" id="countrySearch" placeholder="Cari negara...">
                 </div>
-                
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Semua</button>
                     <button class="filter-btn" data-filter="high">Request Tinggi</button>
                     <button class="filter-btn" data-filter="low">Request Rendah</button>
                 </div>
             </div>
-            
             <div class="stats-bar">
                 <div class="stat-item">
                     <div class="stat-value" id="countryCount">0</div>
@@ -476,7 +411,6 @@
                     <div class="stat-label">Periode Data</div>
                 </div>
             </div>
-            
             <div class="card-content">
                 <table id="countryTable">
                     <thead>
@@ -492,19 +426,23 @@
                 </table>
             </div>
         </div>
-        
+        <!-- Bagian ikon sosial media di atas copyright -->
+<div class="icon-buttons">
+  <a href="https://github.com/username" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://www.youtube.com/channel/yourchannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+  <a href="https://t.me/club_gratis" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+</div>
+
         <footer>
-            <p>© 2025 Cloudflare Analytics Dashboard | Data diperbarui setiap 15 menit</p>
+            <p>© 2025 Club Gratis Analytics Dashboard | Data diperbarui setiap 15 menit</p>
         </footer>
     </div>
-
     <script>
         // Konfigurasi API
         const API_URLS = {
             main: 'https://api-bndwht.marinaaqua366.workers.dev/',
             country: 'https://bandwidth-by-country.marinaaqua366.workers.dev/'
         };
-        
         // Elemen DOM
         const elements = {
             dailyTable: document.getElementById('dailyTable').querySelector('tbody'),
@@ -519,31 +457,24 @@
             totalBandwidth: document.getElementById('totalBandwidth'),
             countryChart: document.getElementById('countryChart')
         };
-        
         // Variabel untuk menyimpan data
         let allCountryData = [];
         let countryChart = null;
-        
         // Fungsi untuk mengambil data dari API
         async function fetchData() {
             try {
                 // Tampilkan loading state
                 showLoading();
-                
                 // Ambil data utama
                 const mainResponse = await fetch(API_URLS.main);
                 const mainData = await mainResponse.json();
-                
                 // Render data utama
                 renderMainData(mainData);
-                
                 // Ambil data country
                 const countryResponse = await fetch(API_URLS.country);
                 const countryData = await countryResponse.json();
-                
                 // Render data country
                 renderCountryData(countryData);
-                
                 // Render chart
                 renderCountryChart(countryData.countries);
             } catch (error) {
@@ -554,7 +485,6 @@
                 hideLoading();
             }
         }
-        
         // Fungsi untuk menampilkan loading state
         function showLoading() {
             const tables = [
@@ -564,7 +494,6 @@
                 elements.totalTable, 
                 elements.countryTable
             ];
-            
             tables.forEach(table => {
                 table.innerHTML = `
                     <tr>
@@ -576,12 +505,10 @@
                 `;
             });
         }
-        
         // Fungsi untuk menyembunyikan loading state
         function hideLoading() {
             // Tidak perlu melakukan apa-apa karena akan digantikan dengan data
         }
-        
         // Fungsi untuk render data utama
         function renderMainData(data) {
             // Render data harian
@@ -595,7 +522,6 @@
                 `;
                 elements.dailyTable.appendChild(row);
             });
-            
             // Render data mingguan
             elements.weeklyTable.innerHTML = `
                 <tr>
@@ -604,7 +530,6 @@
                     <td>${data.weekly.requests}</td>
                 </tr>
             `;
-            
             // Render data bulanan
             elements.monthlyTable.innerHTML = `
                 <tr>
@@ -613,64 +538,59 @@
                     <td>${data.monthly.requests}</td>
                 </tr>
             `;
-            
             // Render data total
             elements.totalTable.innerHTML = `
                 <tr>
-                    <td>${data.total.periode}</td>
+                    <td>Total</td>
                     <td>${data.total.bandwidth}</td>
                     <td>${data.total.requests}</td>
                 </tr>
             `;
         }
-        
         // Fungsi untuk render data country
         function renderCountryData(data) {
             // Simpan data untuk filter
             allCountryData = data.countries;
-            
             // Update statistik
             elements.countryCount.textContent = data.meta.total_countries;
             elements.totalRequests.textContent = data.totals.requests;
             elements.totalBandwidth.textContent = data.totals.bandwidth;
-            
             // Render tabel
             renderCountryTable(allCountryData);
         }
-        
-        // Fungsi untuk render tabel country
-        function renderCountryTable(countries) {
-            elements.countryTable.innerHTML = '';
-            
-            countries.forEach(item => {
-                const row = document.createElement('tr');
-                
-                // Menambahkan ikon bendera berdasarkan negara
-                let flagIcon = '<i class="fas fa-flag"></i>';
-                
-                row.innerHTML = `
-                    <td>${flagIcon} ${item.country}</td>
-                    <td>${item.requests}</td>
-                    <td>${item.bandwidth}</td>
-                `;
-                elements.countryTable.appendChild(row);
-            });
-        }
-        
+        // Fungsi untuk mengubah kode negara ke emoji bendera
+function countryCodeToEmoji(countryCode) {
+    const OFFSET = 127397;
+    return String.fromCodePoint(...countryCode.toUpperCase().split('').map(c => c.charCodeAt(0) + OFFSET));
+}
+
+function renderCountryTable(countries) {
+    elements.countryTable.innerHTML = '';
+    countries.forEach(item => {
+        // Menambahkan emoji bendera sesuai kode negara
+        const flagEmoji = countryCodeToEmoji(item.country);
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${flagEmoji} ${item.country}</td>
+            <td>${item.requests}</td>
+            <td>${item.bandwidth}</td>
+        `;
+        elements.countryTable.appendChild(row);
+    });
+}
+
         // Fungsi untuk render chart
         function renderCountryChart(countries) {
             // Hapus chart sebelumnya jika ada
             if (countryChart) {
                 countryChart.destroy();
             }
-            
             // Siapkan data untuk chart
             const labels = countries.map(c => c.country);
             const requests = countries.map(c => {
                 // Konversi string seperti "100,000" menjadi angka 100000
                 return parseInt(c.requests.replace(/,/g, ''));
             });
-            
             // Buat chart
             const ctx = elements.countryChart.getContext('2d');
             countryChart = new Chart(ctx, {
@@ -722,21 +642,17 @@
                 }
             });
         }
-        
         // Fungsi untuk filter data negara
         function filterCountryData() {
             const searchTerm = elements.countrySearch.value.toLowerCase();
             const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
-            
             let filteredData = [...allCountryData];
-            
             // Filter berdasarkan pencarian
             if (searchTerm) {
                 filteredData = filteredData.filter(item => 
                     item.country.toLowerCase().includes(searchTerm)
                 );
             }
-            
             // Filter berdasarkan jenis filter
             if (activeFilter !== 'all') {
                 filteredData = filteredData.filter(item => {
@@ -744,14 +660,11 @@
                     return activeFilter === 'high' ? requests > 100000 : requests <= 100000;
                 });
             }
-            
             // Render tabel dengan data yang sudah difilter
             renderCountryTable(filteredData);
         }
-        
         // Event Listeners
         elements.countrySearch.addEventListener('input', filterCountryData);
-        
         elements.filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 elements.filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -759,10 +672,8 @@
                 filterCountryData();
             });
         });
-        
         // Panggil fungsi fetchData saat halaman dimuat
         window.addEventListener('DOMContentLoaded', fetchData);
-        
         // Refresh data setiap 5 menit
         setInterval(fetchData, 5 * 60 * 1000);
     </script>

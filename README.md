@@ -81,6 +81,8 @@ git clone (https://github.com/MarinaAqua/Analytics-Logs-Bandwidth.git)
 ## 📂 Struktur Folder
 
 club-gratis-dashboard/
+
+├── Image
 ├── index.html
 ├── style.css (opsional)
 ├── script.js (opsional)

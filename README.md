@@ -1,43 +1,96 @@
 # Club Gratis Analytics Dashboard
 
-## Deskripsi
-Dashboard ini digunakan untuk memonitor traffic dan bandwidth secara real-time dengan data harian, mingguan, bulanan, dan total. Dashboard juga menampilkan data requests dan bandwidth berdasarkan negara dengan grafik dan tabel.
+![Dashboard Preview](https://raw.githubusercontent.com/MarinaAqua/portofolio2/main/logo.jpg)
+*Contoh tampilan dashboard (ganti link gambar dengan screenshot dashboard Anda).*
 
-## Fitur
-- **Tampilan dashboard yang responsif dan modern** dengan efek blur dan gradien warna.
-- **Data harian, mingguan, bulanan, dan total** dalam bentuk tabel.
-- **Grafik bar** yang menampilkan jumlah requests per negara.
-- **Tabel data negara** dengan bendera emoji sesuai kode negara.
-- **Fitur pencarian dan filter** data negara berdasarkan jumlah requests.
-- **Ikon home, donate, dan ikon sosial media** (GitHub, YouTube, Telegram) dengan link aktif.
-- **Logo foto bulat** di bagian atas dashboard.
-- **Data diperbarui secara otomatis** setiap 5 menit.
+---
 
-## Teknologi
-- **HTML5 dan CSS3** untuk struktur dan styling.
-- **JavaScript** untuk interaktivitas dan pengambilan data API.
-- **Chart.js** untuk visualisasi grafik.
-- **Font Awesome** untuk ikon.
+## 📌 Tentang Project
 
-## Cara Penggunaan
-1. **Clone repository ini.**
+**Club Gratis Analytics Dashboard** adalah aplikasi web untuk memantau traffic dan bandwidth secara real-time. Dashboard ini menampilkan data harian, mingguan, bulanan, serta analisis berdasarkan negara dengan visualisasi grafik yang interaktif dan responsif.
+
+---
+
+## 🚀 Fitur Utama
+
+- **Tampilan Modern**  
+  - Gradien warna, efek blur, dan animasi hover.
+  - Responsif di berbagai perangkat (desktop, tablet, mobile).
+- **Monitoring Data**
+  - **Data Harian, Mingguan, Bulanan, dan Total** dalam bentuk tabel.
+  - **Grafik Bar** untuk visualisasi requests per negara.
+  - **Tabel Data Negara** dengan bendera emoji sesuai kode negara.
+- **Fitur Pencarian & Filter**
+  - Pencarian data negara berdasarkan nama.
+  - Filter data berdasarkan jumlah requests (tinggi/rendah).
+- **Integrasi Ikon Sosial Media**
+  - Ikon home, donate, dan sosial media (GitHub, YouTube, Telegram) dengan link aktif.
+- **Automatisasi**
+  - **Data diperbarui otomatis** setiap 5 menit.
+- **Logo Profil**
+  - Logo foto bulat di bagian atas dashboard.
+
+---
+
+## 🛠 Teknologi yang Digunakan
+
+- **HTML5 & CSS3**  
+  Struktur dan styling dashboard.
+- **JavaScript**  
+  Interaktivitas, pengambilan data API, dan manipulasi DOM.
+- **Chart.js**  
+  Visualisasi grafik requests per negara.
+- **Font Awesome**  
+  Ikon home, donate, dan sosial media.
+
+---
+
+## 📸 Screenshot Dashboard
+
+![Dashboard Screenshot](https://raw.githubusercontent.com/MarinaAqua/portofolio2/main/logo.jpg)  
+*Ganti link gambar di atas dengan screenshot dashboard Anda.*
+
+---
+
+## 🧑‍💻 Cara Penggunaan
+
+1. **Clone repository ini:**
+git clone https://github.com/username/repo.git
 2. **Buka file `index.html` di browser.**
 3. **Pastikan koneksi internet aktif** untuk mengambil data dari API.
-4. **Ikon home dan donate** dapat diklik untuk menuju link yang sudah ditentukan.
+4. **Ikon home, donate, dan sosial media** dapat diklik untuk menuju link yang sudah ditentukan.
 5. **Gunakan fitur pencarian dan filter** untuk melihat data negara tertentu.
 
-## Konfigurasi
+---
+
+## ⚙️ Konfigurasi
+
 - **API utama dan API data negara** dikonfigurasi di variabel `API_URLS` pada file JavaScript.
 - **Ganti link ikon home, donate, dan sosial media** sesuai kebutuhan.
 - **Ganti logo foto** dengan mengganti URL atau file gambar pada bagian HTML.
 
-## Struktur Folder
-- **`index.html`**: File utama dashboard.
-- **`style.css` (jika ada)**: File styling tambahan.
-- **`script.js` (jika ada)**: File JavaScript tambahan.
+---
 
-## Lisensi
-Project ini bersifat open source dan dapat digunakan serta dimodifikasi sesuai kebutuhan.
+## 📂 Struktur Folder
 
-## Kontak
+club-gratis-dashboard/
+├── index.html
+├── style.css (opsional)
+├── script.js (opsional)
+└── README.md
+
+---
+
+## 📜 Lisensi
+
+Project ini bersifat **open source** dan dapat digunakan serta dimodifikasi sesuai kebutuhan.
+
+---
+
+## 📞 Kontak
+
 Untuk pertanyaan atau kontribusi, silakan hubungi melalui link sosial media yang tersedia di dashboard.
+
+---
+
+**Happy Monitoring!** 🚀

@@ -1,7 +1,7 @@
 # Club Gratis Analytics Dashboard
 
-![Dashboard Preview](https://raw.githubusercontent.com/MarinaAqua/portofolio2/main/logo.jpg)
-*Contoh tampilan dashboard (ganti link gambar dengan screenshot dashboard Anda).*
+![Dashboard Preview](https://raw.githubusercontent.com/MarinaAqua/Analytics-Logs-Bandwidth/Image/main/logo.jpg)
+*Contoh tampilan logo profil dashboard (ganti link gambar dengan screenshot dashboard Anda).*
 
 ---
 
@@ -45,9 +45,9 @@
 
 ---
 
-## 📸 Screenshot Dashboard
+## 📸 Screenshot Dasboard Mobile
 
-![Dashboard Screenshot](https://raw.githubusercontent.com/MarinaAqua/portofolio2/main/logo.jpg)  
+![Dashboard Screenshot](https://raw.githubusercontent.com/MarinaAqua/Analytics-Logs-Bandwidth/Image/main/mobile.jpg)  
 *Ganti link gambar di atas dengan screenshot dashboard Anda.*
 
 ---

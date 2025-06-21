@@ -97,7 +97,7 @@ Project ini bersifat **open source** dan dapat digunakan serta dimodifikasi sesu
 ## 📞 Kontak
 
 Untuk pertanyaan atau kontribusi, silakan hubungi melalui link sosial media yang tersedia di dashboard.
-![Telegram]
+**Telegram**
 https://t.me/club_gratis
 
 ---

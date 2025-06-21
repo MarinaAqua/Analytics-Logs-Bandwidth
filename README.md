@@ -45,10 +45,17 @@
 
 ---
 
-## 📸 Screenshot Dasboard Mobile
+## 📸 Screenshot Dashboard Tampilan Mobile
 
-![Dashboard Screenshot](https://raw.githubusercontent.com/MarinaAqua/Analytics-Logs-Bandwidth/Image/main/mobile.jpg)  
-*Ganti link gambar di atas dengan screenshot dashboard Anda.*
+![Dashboard Screenshot](https://raw.githubusercontent.com/MarinaAqua/Analytics-Logs-Bandwidth/main/Image/mobile.jpg)  
+*Mobile .*
+
+---
+
+## 📸 Screenshot Dashboard Tampilan Desktop
+
+![Dashboard Screenshot](https://raw.githubusercontent.com/MarinaAqua/Analytics-Logs-Bandwidth/main/Image/desktop.jpg)  
+*Desktop .*
 
 ---
 
@@ -90,6 +97,8 @@ Project ini bersifat **open source** dan dapat digunakan serta dimodifikasi sesu
 ## 📞 Kontak
 
 Untuk pertanyaan atau kontribusi, silakan hubungi melalui link sosial media yang tersedia di dashboard.
+![Telegram]
+https://t.me/club_gratis
 
 ---
 

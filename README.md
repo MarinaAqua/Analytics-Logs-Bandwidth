@@ -62,7 +62,7 @@
 ## 🧑‍💻 Cara Penggunaan
 
 1. **Clone repository ini:**
-git clone [https://github.com/MarinaAqua/Analytics-Logs-Bandwidth.git]
+git clone (https://github.com/MarinaAqua/Analytics-Logs-Bandwidth.git)
 2. **Buka file `index.html` di browser.**
 3. **Pastikan koneksi internet aktif** untuk mengambil data dari API.
 4. **Ikon home, donate, dan sosial media** dapat diklik untuk menuju link yang sudah ditentukan.

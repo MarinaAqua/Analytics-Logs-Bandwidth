@@ -94,11 +94,19 @@ Project ini bersifat **open source** dan dapat digunakan serta dimodifikasi sesu
 
 ---
 
-## 📞 Kontak
+## 📣 Kontak
+
+- Telegram Channel: [Mr.king's Official](https://t.me/club_gratis1)
+- Group Telegram: [Join Group](https://t.me/club_gratis)
 
 Untuk pertanyaan atau kontribusi, silakan hubungi melalui link sosial media yang tersedia di dashboard.
-**Telegram**
-https://t.me/club_gratis
+
+---
+
+## 🫰 Donasi
+
+![Donasi](https://raw.githubusercontent.com/MarinaAqua/Analytics-Logs-Bandwidth/main/Image/qr-donate.jpg)  
+*Terimakasih .*
 
 ---
 

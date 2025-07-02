@@ -73,7 +73,7 @@ git clone (https://github.com/MarinaAqua/Analytics-Logs-Bandwidth.git)
 ## ⚙️ Konfigurasi
 
 - **Buat Dulu Api Utama Dan Api Data negara** Deploy Script Api Dicloudflare Workers.
-- **API utama dan API data negara** dikonfigurasi di variabel `API_URLS` pada file HTML.
+- **API utama dan API data negara** dikonfigurasi di variabel `API_URLS` pada file **index.html**.
 - **Ganti link ikon home, donate, dan sosial media** sesuai kebutuhan.
 - **Ganti logo foto** dengan mengganti URL atau file gambar pada bagian HTML.
 

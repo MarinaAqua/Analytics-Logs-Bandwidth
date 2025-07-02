@@ -1,7 +1,7 @@
 # Club Gratis Analytics Dashboard
 
 ![Dashboard Preview](https://raw.githubusercontent.com/MarinaAqua/Analytics-Logs-Bandwidth/main/Image/logo.jpg)
-*Contoh tampilan logo profil dashboard (ganti link gambar dengan screenshot dashboard Anda).*
+*Contoh tampilan logo profil dashboard (ganti gambar dengan Logo dashboard Anda).*
 
 ---
 
